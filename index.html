@@ -30,20 +30,39 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(250,248,246,0.93); backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 3rem; height: 54px;
+    display: flex; flex-direction: column;
+    align-items: center;
+    padding: 0.55rem 3rem 0.45rem;
+    gap: 0;
   }
-  .nav-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--rose); letter-spacing: 0.05em; }
+  .nav-tagline {
+    text-align: center;
+    padding-bottom: 0.4rem;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.38rem;
+  }
+  .nav-tagline .sanskrit {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.68rem; color: var(--rose); letter-spacing: 0.06em;
+  }
+  .nav-tagline .sep {
+    color: var(--muted); margin: 0 0.4rem; font-weight: 300; font-size: 0.65rem;
+  }
+  .nav-tagline .translation {
+    font-family: 'DM Sans', sans-serif; font-size: 0.58rem;
+    font-weight: 300; font-style: italic; color: var(--muted); letter-spacing: 0.02em;
+  }
   .nav-links { display: flex; gap: 1.6rem; list-style: none; }
-  .nav-links a { font-size: 0.72rem; letter-spacing: 0.09em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: color 0.2s; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.09em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: color 0.2s; }
   .nav-links a:hover { color: var(--rose); }
-  main { position: relative; z-index: 1; padding-top: 54px; }
+  main { position: relative; z-index: 1; padding-top: 58px; }
   section { padding: 3.5rem 2rem 1.5rem; max-width: 980px; margin: 0 auto; }
   .sec-divider { border: none; border-top: 1px solid var(--border); max-width: 980px; margin: 0 auto; }
   .section-label { font-size: 0.67rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 8px; }
   .section-label::before { content: ''; width: 18px; height: 1px; background: var(--rose); }
   .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 300; color: var(--dark); margin-bottom: 1.8rem; line-height: 1.15; }
-  #hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 4rem; max-width: 100%; }
+  #hero { display: flex; align-items: center; justify-content: center; padding: 5rem 4rem 2rem; max-width: 100%; }
   .hero-inner { display: flex; align-items: center; gap: 5rem; max-width: 980px; width: 100%; }
   .hero-photo-wrap { flex-shrink: 0; }
   .hero-photo-ring { width: 270px; height: 270px; border-radius: 50%; background: linear-gradient(145deg, var(--rose-light), var(--rose)); padding: 3px; position: relative; }
@@ -138,7 +157,11 @@
 <body>
 <div class="petal-bg" id="petalBg"></div>
 <nav>
-  <div class="nav-name">Aurosweta Mahapatra</div>
+  <div class="nav-tagline">
+    <span class="sanskrit">सर्ववस्तूनि कारणोद्भवानि</span>
+    <span class="sep">·</span>
+    <span class="translation">Everything happens for a reason</span>
+  </div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#education">Education</a></li>
@@ -183,7 +206,7 @@
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="section-label">01 &middot; About</div>
+
   <h2 class="section-title">About <em style="font-style:italic;color:var(--rose)">Me</em></h2>
   <div class="about-grid">
     <div class="about-text">
@@ -216,7 +239,7 @@
 
 <!-- EDUCATION -->
 <section id="education">
-  <div class="section-label">02 &middot; Education</div>
+
   <h2 class="section-title">Academic <em style="font-style:italic;color:var(--rose)">Journey</em></h2>
   <div class="edu-timeline">
     <div class="edu-item">
@@ -244,7 +267,7 @@
 
 <!-- RESEARCH -->
 <section id="research">
-  <div class="section-label">03 &middot; Research</div>
+
   <h2 class="section-title">Research <em style="font-style:italic;color:var(--rose)">Areas</em></h2>
   <div class="research-cards">
     <div class="res-card">
@@ -278,7 +301,7 @@
 
 <!-- PUBLICATIONS -->
 <section id="publications">
-  <div class="section-label">04 &middot; Publications</div>
+
   <h2 class="section-title">Selected <em style="font-style:italic;color:var(--rose)">Publications</em></h2>
   <div class="pub-list">
     <div class="pub-item">
@@ -336,7 +359,7 @@
 
 <!-- PRESENTATIONS -->
 <section id="presentations">
-  <div class="section-label">05 &middot; Presentations</div>
+
   <h2 class="section-title">Talks &amp; <em style="font-style:italic;color:var(--rose)">Presentations</em></h2>
   <div class="pres-list">
     <div class="pres-item">
@@ -367,7 +390,7 @@
 
 <!-- UPDATES -->
 <section id="updates">
-  <div class="section-label">06 &middot; Updates</div>
+
   <h2 class="section-title">Recent <em style="font-style:italic;color:var(--rose)">Updates</em></h2>
   <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1.4rem;">Latest news, conferences, and milestones. To add a photo, save the image in the same folder as this file, then replace the placeholder div with: &lt;img src="yourphoto.jpg" alt="description" /&gt;</p>
   <div class="updates-grid">
@@ -418,7 +441,7 @@
 
 <!-- BEYOND RESEARCH -->
 <section id="beyond">
-  <div class="section-label">07 &middot; Life Beyond Research</div>
+
   <h2 class="section-title">Beyond the <em style="font-style:italic;color:var(--rose)">Researcher</em></h2>
   <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1.4rem;">The things that make me &mdash; me. Edit the titles and descriptions below, and add your own photos.</p>
   <div class="beyond-grid">
