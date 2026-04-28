@@ -126,7 +126,7 @@
   .pres-sub { font-size: 0.74rem; color: var(--muted); margin-top: 0.18rem; }
   .updates-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
   .update-card { background: white; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-  .update-card-photo { width: 100%; aspect-ratio: 16/9; background: var(--rose-pale); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .update-card-photo { width: 100%; aspect-ratio: 3/4; background: var(--rose-pale); display: flex; align-items: center; justify-content: center; overflow: hidden; }
   .update-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .update-photo-placeholder { font-size: 0.73rem; color: #b0a0a0; text-align: center; padding: 1rem; line-height: 1.7; }
   .update-card-body { padding: 0.9rem 1.1rem; }
@@ -164,12 +164,13 @@
     <span class="translation">Everything happens for a reason</span>
   </div>
   <ul class="nav-links">
+    <li><a href="#news">News</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#research">Projects &amp; Resources</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#presentations">Presentations</a></li>
-    <li><a href="#updates">Updates</a></li>
+    <li><a href="#updates">Milestones</a></li>
     <li><a href="#beyond">Beyond the Researcher</a></li>
   </ul>
 </nav>
@@ -208,7 +209,20 @@
 
 <hr class="sec-divider">
 
-<!-- ABOUT -->
+<!-- NEWS -->
+<section id="news" style="padding: 2rem 2rem 1.5rem;">
+  <h2 class="section-title" style="margin-bottom:1rem;">Latest <em style="font-style:italic;color:var(--rose)">News</em></h2>
+  <div style="display:flex;flex-direction:column;gap:0.5rem;">
+    <div style="display:flex;gap:1rem;align-items:baseline;font-size:0.82rem;">
+      <span style="color:var(--rose);font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap;min-width:80px;">Apr 2026</span>
+      <span style="color:var(--text);">Accepted for a poster presentation at the <strong>Amazon Trusted AI Symposium 2026</strong>.</span>
+    </div>
+    <div style="display:flex;gap:1rem;align-items:baseline;font-size:0.82rem;">
+      <span style="color:var(--rose);font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap;min-width:80px;">Sep 2025</span>
+      <span style="color:var(--text);">Presented <strong>"Can Emotion Fool Anti-Spoofing?"</strong> at Interspeech 2025 and selected for the Doctoral Consortium.</span>
+    </div>
+  </div>
+</section>
 <section id="about">
 
   <h2 class="section-title">About <em style="font-style:italic;color:var(--rose)">Me</em></h2>
@@ -392,7 +406,7 @@
 <!-- UPDATES -->
 <section id="updates">
 
-  <h2 class="section-title">Recent <em style="font-style:italic;color:var(--rose)">Updates</em></h2>
+  <h2 class="section-title"><em style="font-style:italic;color:var(--rose)">Milestones</em></h2>
   <div class="updates-grid">
     <div class="update-card">
       <div class="update-card-photo">
@@ -428,6 +442,24 @@
       <div class="update-card-body">
         <div class="update-date">Jan 2025</div>
         <div class="update-text">Joined <strong>Johns Hopkins University</strong> as a PhD student at SMILE Lab, CLSP under Dr. Berrak Sisman.</div>
+      </div>
+    </div>
+    <div class="update-card">
+      <div class="update-card-photo">
+        <img src="UTD.jpg" alt="UT Dallas" />
+      </div>
+      <div class="update-card-body">
+        <div class="update-date">2024</div>
+        <div class="update-text">Joined as Research Assistant at <strong>UT Dallas</strong>.</div>
+      </div>
+    </div>
+    <div class="update-card">
+      <div class="update-card-photo">
+        <img src="UCLA_Grad.JPEG" alt="UCLA Graduation" />
+      </div>
+      <div class="update-card-body">
+        <div class="update-date">Jun 2024</div>
+        <div class="update-text">Graduated with an <strong>MS in Electrical & Computer Engineering</strong> from UCLA, with specialization in signals and systems.</div>
       </div>
     </div>
   </div>
