@@ -65,10 +65,10 @@
   #hero { display: flex; align-items: center; justify-content: center; padding: 5rem 4rem 2rem; max-width: 100%; }
   .hero-inner { display: flex; align-items: center; gap: 5rem; max-width: 980px; width: 100%; }
   .hero-photo-wrap { flex-shrink: 0; }
-  .hero-photo-ring { width: 270px; height: 270px; border-radius: 50%; background: linear-gradient(145deg, var(--rose-light), var(--rose)); padding: 3px; position: relative; }
+  .hero-photo-ring { width: 320px; height: 320px; border-radius: 50%; overflow: hidden; background: linear-gradient(145deg, var(--rose-light), var(--rose)); padding: 3px; position: relative; }
   .hero-photo-ring::after { content: ''; position: absolute; inset: -9px; border-radius: 50%; border: 1px dashed rgba(160,104,122,0.22); animation: spin 38s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
-  .hero-photo-ring img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 85%; display: block; }
+  .hero-photo-ring img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 75%; display: block; transform: scale(2); transform-origin: 50% 75%; }
   .hero-initials { width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(145deg,#c8a0ac,#a0687a); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond',serif; font-size: 3.5rem; color: white; font-weight: 300; }
   .hero-text { flex: 1; }
   .hero-tag { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rose); margin-bottom: 0.9rem; display: flex; align-items: center; gap: 8px; }
@@ -181,7 +181,7 @@
   <div class="hero-inner">
     <div class="hero-photo-wrap">
       <div class="hero-photo-ring">
-        <img src="Profile_pho.jpg" alt="Aurosweta Mahapatra" />
+        <img src="Profile_pho_2.png" alt="Aurosweta Mahapatra" />
       </div>
     </div>
     <div class="hero-text">
