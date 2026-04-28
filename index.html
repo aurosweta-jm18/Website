@@ -8,17 +8,17 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root {
-    --rose: #a0687a;
-    --rose-light: #c8a0ac;
-    --rose-pale: #f7f0f2;
-    --cream: #faf8f6;
-    --dark: #252020;
-    --muted: #7a6868;
-    --text: #3a2e2e;
-    --border: rgba(140, 100, 110, 0.12);
+    --rose: #b07080;
+    --rose-light: #d4a8b4;
+    --rose-pale: #fdf5f6;
+    --cream: #ffffff;
+    --dark: #1a1a1a;
+    --muted: #888888;
+    --text: #2a2a2a;
+    --border: rgba(0, 0, 0, 0.08);
   }
   html { scroll-behavior: smooth; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+  body { font-family: 'DM Sans', sans-serif; background: #ffffff; color: var(--text); overflow-x: hidden; }
   .petal-bg { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
   .petal { position: absolute; opacity: 0; animation: fall linear infinite; }
   @keyframes fall {
@@ -28,7 +28,7 @@
   }
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(250,248,246,0.93); backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.95); backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border);
     display: flex; flex-direction: column;
     align-items: center;
@@ -83,9 +83,9 @@
   .btn-outline { background: transparent; color: var(--rose); border: 1px solid var(--rose); }
   .btn-outline:hover { background: var(--rose-pale); transform: translateY(-1px); }
   .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: start; }
-  .about-text { font-size: 0.87rem; line-height: 1.9; color: #5a4848; }
+  .about-text { font-size: 0.87rem; line-height: 1.9; color: #444444; }
   .about-text p + p { margin-top: 0.85rem; }
-  .about-meta { font-size: 0.83rem; line-height: 1.85; color: #6a5858; }
+  .about-meta { font-size: 0.83rem; line-height: 1.85; color: #555555; }
   .about-meta-block { margin-bottom: 1.1rem; }
   .about-meta-block:last-child { margin-bottom: 0; }
   .about-meta-block strong { font-size: 0.84rem; color: var(--dark); display: block; margin-bottom: 0.15rem; }
@@ -97,7 +97,7 @@
   .edu-years { font-size: 0.71rem; letter-spacing: 0.1em; color: var(--rose); text-transform: uppercase; margin-bottom: 0.25rem; }
   .edu-degree { font-family: 'Cormorant Garamond', serif; font-size: 1.22rem; font-weight: 400; color: var(--dark); margin-bottom: 0.12rem; }
   .edu-school { font-size: 0.81rem; color: var(--muted); margin-bottom: 0.3rem; }
-  .edu-detail { font-size: 0.78rem; color: #888; line-height: 1.65; }
+  .edu-detail { font-size: 0.78rem; color: #777777; line-height: 1.65; }
   .research-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
   .res-card { background: white; border: 1px solid var(--border); border-radius: 13px; padding: 1.4rem; transition: transform 0.2s, box-shadow 0.2s; }
   .res-card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(140,90,105,0.07); }
@@ -378,10 +378,10 @@
       </div>
     </div>
     <div class="pres-item">
-      <span class="pres-badge">2025 &middot; Talk</span>
+      <span class="pres-badge">2025 &middot; Poster</span>
       <div>
         <div class="pres-text"><strong>Interspeech 2025</strong> &mdash; "Can Emotion Fool Anti-Spoofing?" Introducing EmoSpoof-TTS and the GEM model</div>
-        <div class="pres-sub">Main conference oral presentation</div>
+        <div class="pres-sub">Poster presentation</div>
       </div>
     </div>
     <div class="pres-item">
