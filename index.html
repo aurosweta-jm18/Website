@@ -106,13 +106,14 @@
   .res-desc { font-size: 0.78rem; line-height: 1.75; color: var(--muted); }
   .res-tag { display: inline-block; margin-top: 0.7rem; padding: 2px 9px; border-radius: 100px; background: var(--rose-pale); color: var(--rose); font-size: 0.68rem; }
   .pub-list { display: flex; flex-direction: column; gap: 0.85rem; }
-  .pub-item { display: flex; gap: 1.2rem; padding: 1.1rem 1.3rem; background: white; border: 1px solid var(--border); border-radius: 11px; transition: border-color 0.2s; }
-  .pub-item:hover { border-color: var(--rose-light); }
+  .pub-item { display: flex; gap: 1.2rem; padding: 1.1rem 1.3rem; background: white; border: 1px solid var(--border); border-radius: 11px; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; cursor: pointer; text-decoration: none; color: inherit; }
+  .pub-item:hover { border-color: var(--rose-light); box-shadow: 0 4px 20px rgba(140,90,105,0.08); transform: translateY(-1px); }
   .pub-year-badge { flex-shrink: 0; width: 46px; text-align: center; }
   .pub-year { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--rose); font-weight: 300; }
   .pub-venue { font-size: 0.62rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1px; }
   .pub-content { flex: 1; }
   .pub-title { font-size: 0.84rem; font-weight: 500; color: var(--dark); margin-bottom: 0.22rem; line-height: 1.5; }
+  .pub-item a:hover .pub-title { color: var(--rose); text-decoration: underline; }
   .pub-authors { font-size: 0.74rem; color: var(--muted); line-height: 1.5; }
   .pub-status { display: inline-block; margin-top: 0.35rem; padding: 2px 8px; border-radius: 100px; font-size: 0.64rem; }
   .pub-status.accepted { background: #edf7ed; color: #2a6e2a; }
@@ -165,11 +166,11 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#education">Education</a></li>
-    <li><a href="#research">Research</a></li>
+    <li><a href="#research">Projects &amp; Resources</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#presentations">Presentations</a></li>
     <li><a href="#updates">Updates</a></li>
-    <li><a href="#beyond">Beyond Research</a></li>
+    <li><a href="#beyond">Beyond the Researcher</a></li>
   </ul>
 </nav>
 <main>
@@ -192,11 +193,15 @@
     <div class="hero-text">
       <div class="hero-tag">PhD Researcher &middot; Johns Hopkins University</div>
       <h1 class="hero-name">Aurosweta<br><em>Mahapatra</em></h1>
-      <p class="hero-desc">Working at the intersection of speech security, synthesis, and healthcare. I build systems that understand not just what we say &mdash; but how emotion shapes the way machines hear us.</p>
+      <div style="font-size:0.78rem;color:var(--muted);line-height:1.8;margin-bottom:1.2rem;">
+        <span>SMILE Lab @ CLSP &middot; Johns Hopkins University</span><br>
+        <span>Advisor: Dr. Berrak Sisman</span><br>
+        <span>Speech Security &middot; Anti-Spoofing &middot; Deepfake Detection &middot; Speech Synthesis &middot; Speech for Healthcare</span>
+      </div>
       <div class="hero-links">
         <a href="mailto:amahapa2@jhu.edu" class="btn btn-primary">Get in touch</a>
-        <a href="https://scholar.google.com/citations?user=YOURID" class="btn btn-outline" target="_blank">Google Scholar</a>
-        <a href="https://linkedin.com/in/YOURPROFILE" class="btn btn-outline" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=ezlI0RoAAAAJ&hl=en" class="btn btn-outline" target="_blank">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/amahapatra09/" class="btn btn-outline" target="_blank">LinkedIn</a>
       </div>
     </div>
   </div>
@@ -208,30 +213,8 @@
 <section id="about">
 
   <h2 class="section-title">About <em style="font-style:italic;color:var(--rose)">Me</em></h2>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>I'm a PhD student at the SMILE Lab, CLSP at Johns Hopkins University, advised by Dr. Berrak Sisman. My research targets a critical vulnerability in speech security: state-of-the-art anti-spoofing models break down when faced with emotionally expressive attacks, because they rely on dataset-specific artifacts rather than generalizable speech structure.</p>
-      <p>To address this, I built <strong>EmoSpoof-TTS</strong> &mdash; the first TTS-based emotional synthetic speech dataset &mdash; and proposed <strong>GEM</strong>, an emotion-aware detection framework. I also designed <strong>HuLA</strong> and <strong>ProSDD</strong>, human-perception-inspired prosody-aware models achieving up to 86% EER reduction on expressive attacks.</p>
-      <p>Beyond security, I work on speech for healthcare (depression and Alzheimer's detection) and speech synthesis. Before Hopkins, I completed my MS at UCLA under Dr. Abeer Alwan, focusing on ASR for child speech.</p>
-    </div>
-    <div class="about-meta">
-      <div class="about-meta-block">
-        <strong>Current Position</strong>
-        PhD Student, ECE &middot; SMILE Lab @ CLSP<br>Johns Hopkins University, Baltimore MD
-      </div>
-      <div class="about-meta-block">
-        <strong>Advisor</strong>
-        Dr. Berrak Sisman
-      </div>
-      <div class="about-meta-block">
-        <strong>Research Interests</strong>
-        Speech Security &middot; Anti-Spoofing &middot; Deepfake Detection<br>Speech Synthesis &middot; Speech for Healthcare
-      </div>
-      <div class="about-meta-block">
-        <strong>Contact</strong>
-        <a href="mailto:amahapa2@jhu.edu" style="color:var(--rose);text-decoration:none;">amahapa2@jhu.edu</a>
-      </div>
-    </div>
+  <div class="about-text" style="max-width:780px;">
+    <p>I am a PhD student at the SMILE Lab, CLSP, Johns Hopkins University, advised by Dr. Berrak Sisman, working at the intersection of speech security, synthesis, and healthcare. My research focuses on a critical gap in modern speech security: current speech deepfake detectors often fail against emotional and expressive synthetic speech because they rely on dataset-specific artifacts rather than true speech structure. In practice, modern text-to-speech and voice conversion systems generate speech that is highly intelligible, speaker-consistent, and context-aware, making them effective for spoofed calls, impersonation, misinformation, and biometric deception, while existing detection models remain vulnerable to these attacks. I address this by designing emotion-aware and prosody-driven models inspired by human perception, which learn more generalizable representations instead of relying solely on classification objectives. Beyond speech security, I also work on speech for healthcare, including depression and Alzheimer's detection, as well as speech synthesis. Before joining Hopkins, I was a research assistant at UT Dallas, where I conducted an in-depth literature review on speech security. I completed my master's at UCLA, working on automatic speech recognition for child speech at SPAPL under the guidance of Dr. Abeer Alwan. I am broadly interested in building reliable and trustworthy speech systems that enable the safe and ethical use of AI in real-world applications.</p>
   </div>
 </section>
 
@@ -268,32 +251,44 @@
 <!-- RESEARCH -->
 <section id="research">
 
-  <h2 class="section-title">Research <em style="font-style:italic;color:var(--rose)">Areas</em></h2>
+  <h2 class="section-title">Projects &amp; <em style="font-style:italic;color:var(--rose)">Resources</em></h2>
   <div class="research-cards">
+
     <div class="res-card">
-      <div class="res-icon">&#127908;</div>
-      <div class="res-title">Speech Security &amp; Anti-Spoofing</div>
-      <div class="res-desc">Identifying failure modes in SOTA deepfake detection. Built EmoSpoof-TTS and proposed GEM, HuLA, and ProSDD &mdash; emotion-aware frameworks achieving up to 86% EER reduction on expressive attacks.</div>
-      <span class="res-tag">Core Focus</span>
+      <div class="res-title">ProSDD</div>
+      <div style="font-size:0.72rem;color:var(--rose);font-style:italic;margin-bottom:0.5rem;">"ProSDD: Learning Prosodic Representations for Speech Deepfake Detection" · Submitted, Interspeech 2026</div>
+      <div class="res-desc">A speaker-conditioned, prosody-aware speech deepfake detection framework based on supervised masked prediction. Improves cross-domain generalization and robustness to expressive and emotional attacks while maintaining strong performance on standard benchmarks across diverse training scenarios.</div>
+      <a href="https://prosdd.github.io/ProSDD_website/" target="_blank" style="font-size:0.76rem;color:var(--rose);text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-top:0.9rem;">↗ Project Page</a>
     </div>
+
     <div class="res-card">
-      <div class="res-icon">&#129504;</div>
-      <div class="res-title">Speech for Healthcare</div>
-      <div class="res-desc">Models for depression and Alzheimer's detection from speech. Studying speaker leakage in depression detection to ensure clinical reliability.</div>
-      <span class="res-tag">Active</span>
+      <div class="res-title">HuLA</div>
+      <div style="font-size:0.72rem;color:var(--rose);font-style:italic;margin-bottom:0.5rem;">"HuLA: Prosody-Aware Anti-Spoofing with Multi-Task Learning" · Under Review, IEEE TAC</div>
+      <div class="res-desc">A human-perception-inspired, prosody-aware deepfake detection model using multi-task learning. Improves robustness to expressive and emotional synthetic speech while maintaining strong performance on standard benchmarks. Learns prosodic patterns that generalize to cross-lingual attacks, including Spanish and Mandarin, even when trained only on English.</div>
+      <a href="https://aurosweta-jm18.github.io/HuLA/" target="_blank" style="font-size:0.76rem;color:var(--rose);text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-top:0.9rem;">↗ Project Page</a>
     </div>
+
     <div class="res-card">
-      <div class="res-icon">&#128266;</div>
-      <div class="res-title">Speech Synthesis &amp; Voice Conversion</div>
-      <div class="res-desc">Released NaturalVoices (5,000+ hours), a large-scale spontaneous and emotional podcast dataset for voice conversion. Expressive TTS systems.</div>
-      <span class="res-tag">Active</span>
+      <div class="res-title">EmoSpoof-TTS</div>
+      <div style="font-size:0.72rem;color:var(--rose);font-style:italic;margin-bottom:0.5rem;">"Can Emotion Fool Anti-Spoofing?" · Interspeech 2025</div>
+      <div class="res-desc">The first TTS-based emotional synthetic speech dataset. Reveals critical vulnerabilities of speech deepfake detectors to expressive and emotion-driven attacks and enables evaluation under realistic conditions. Exposes performance disparities across emotional states, which we define as vulnerability to emotion-targeted attacks.</div>
+      <a href="https://emospoof-tts.github.io/Dataset/" target="_blank" style="font-size:0.76rem;color:var(--rose);text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-top:0.9rem;">↗ Dataset Page</a>
     </div>
+
     <div class="res-card">
-      <div class="res-icon">&#128104;</div>
-      <div class="res-title">Child Speech Recognition</div>
-      <div class="res-desc">Co-developed the JIBO Kids Corpus (21 hours, 110 children ages 4&ndash;7). TTS-based augmentation improved child ASR by 14.7% over baseline.</div>
-      <span class="res-tag">MS Work</span>
+      <div class="res-title">NaturalVoices</div>
+      <div style="font-size:0.72rem;color:var(--rose);font-style:italic;margin-bottom:0.5rem;">"NaturalVoices: A Large-Scale, Spontaneous and Emotional Podcast Dataset" · Under Review, IEEE TAC</div>
+      <div class="res-desc">A large-scale dataset with over 5,000 hours of spontaneous and emotional podcast speech, designed to support research in voice conversion and expressive speech modeling.</div>
+      <a href="https://github.com/Lab-MSP/NaturalVoices" target="_blank" style="font-size:0.76rem;color:var(--rose);text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-top:0.9rem;">↗ GitHub</a>
     </div>
+
+    <div class="res-card">
+      <div class="res-title">JIBO Kids Corpus</div>
+      <div style="font-size:0.72rem;color:var(--rose);font-style:italic;margin-bottom:0.5rem;">"The JIBO Kids Corpus: A speech dataset of child-robot interactions" · JASA Express Letters 2024</div>
+      <div class="res-desc">A 21-hour dataset of child–robot interactions in classroom environments, covering 110 children aged 4–7 with longitudinal recordings and word-level annotations.</div>
+      <a href="https://github.com/balaji1312/Jibo_Kids" target="_blank" style="font-size:0.76rem;color:var(--rose);text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-top:0.9rem;">↗ GitHub</a>
+    </div>
+
   </div>
 </section>
 
@@ -302,56 +297,63 @@
 <!-- PUBLICATIONS -->
 <section id="publications">
 
-  <h2 class="section-title">Selected <em style="font-style:italic;color:var(--rose)">Publications</em></h2>
+  <h2 class="section-title">Publications <em style="font-style:italic;color:var(--rose)">(Relevant Work)</em></h2>
   <div class="pub-list">
-    <div class="pub-item">
+
+    <a href="https://arxiv.org/abs/2604.13229" target="_blank" class="pub-item">
       <div class="pub-year-badge"><div class="pub-year">2026</div><div class="pub-venue">IS2026</div></div>
       <div class="pub-content">
         <div class="pub-title">ProSDD: Learning Prosodic Representations for Speech Deepfake Detection against Expressive and Emotional Attacks</div>
-        <div class="pub-authors">Mahapatra, A., Ulgen, I. R., Lee, K. A., Andrews, N., &amp; Sisman, B.</div>
+        <div class="pub-authors"><strong>Mahapatra, A.</strong>, Ulgen, I. R., Lee, K. A., Andrews, N., &amp; Sisman, B.</div>
         <span class="pub-status submitted">Submitted &middot; Interspeech 2026</span>
       </div>
-    </div>
-    <div class="pub-item">
+    </a>
+
+    <a href="https://arxiv.org/pdf/2604.14354" target="_blank" class="pub-item">
       <div class="pub-year-badge"><div class="pub-year">2026</div><div class="pub-venue">IS2026</div></div>
       <div class="pub-content">
         <div class="pub-title">Who is Speaking or Who is Depressed? A Controlled Study of Speaker Leakage in Speech-Based Depression Detection</div>
-        <div class="pub-authors">Yeh, H. C., Sun, L., Mahapatra, A., Chandra, S. S., Provost, E. M., &amp; Sisman, B.</div>
+        <div class="pub-authors">Yeh, H. C., Sun, L., <strong>Mahapatra, A.</strong>, Chandra, S. S., Provost, E. M., &amp; Sisman, B.</div>
         <span class="pub-status submitted">Submitted &middot; Interspeech 2026</span>
       </div>
-    </div>
-    <div class="pub-item">
+    </a>
+
+    <a href="https://arxiv.org/pdf/2509.21676" target="_blank" class="pub-item">
       <div class="pub-year-badge"><div class="pub-year">2025</div><div class="pub-venue">IEEE TAC</div></div>
       <div class="pub-content">
         <div class="pub-title">HuLA: Prosody-Aware Anti-Spoofing with Multi-Task Learning for Expressive and Emotional Synthetic Speech</div>
-        <div class="pub-authors">Mahapatra A., Ulgen I.R., Sisman B.</div>
+        <div class="pub-authors"><strong>Mahapatra A.</strong>, Ulgen I.R., Sisman B.</div>
         <span class="pub-status review">Under Review &middot; IEEE TAC</span>
       </div>
-    </div>
-    <div class="pub-item">
+    </a>
+
+    <a href="https://arxiv.org/pdf/2505.23962" target="_blank" class="pub-item">
       <div class="pub-year-badge"><div class="pub-year">2025</div><div class="pub-venue">IS2025</div></div>
       <div class="pub-content">
         <div class="pub-title">Can Emotion Fool Anti-spoofing?</div>
-        <div class="pub-authors">Mahapatra A., Ulgen, I.R., Reddy Naini, A., Busso, C., Sisman, B.</div>
+        <div class="pub-authors"><strong>Mahapatra A.</strong>, Ulgen, I.R., Reddy Naini, A., Busso, C., Sisman, B.</div>
         <span class="pub-status accepted">Published &middot; Interspeech 2025</span>
       </div>
-    </div>
-    <div class="pub-item">
+    </a>
+
+    <a href="https://arxiv.org/pdf/2511.00256" target="_blank" class="pub-item">
       <div class="pub-year-badge"><div class="pub-year">2025</div><div class="pub-venue">IEEE TAC</div></div>
       <div class="pub-content">
         <div class="pub-title">NaturalVoices: A Large-Scale, Spontaneous and Emotional Podcast Dataset for Voice Conversion</div>
-        <div class="pub-authors">Du Z., Chandra S.S., Ulgen I.R., Mahapatra A., Salman A.N., Busso C., Sisman B.</div>
+        <div class="pub-authors">Du Z., Chandra S.S., Ulgen I.R., <strong>Mahapatra A.</strong>, Salman A.N., Busso C., Sisman B.</div>
         <span class="pub-status review">Under Review &middot; IEEE TAC</span>
       </div>
-    </div>
-    <div class="pub-item">
+    </a>
+
+    <a href="https://pubs.aip.org/asa/jel/article/4/11/115201/3318582" target="_blank" class="pub-item">
       <div class="pub-year-badge"><div class="pub-year">2024</div><div class="pub-venue">JASA EL</div></div>
       <div class="pub-content">
         <div class="pub-title">The JIBO Kids Corpus: A speech dataset of child-robot interactions in a classroom environment</div>
-        <div class="pub-authors">Shankar, N. B., Afshan, A., Johnson, A., Mahapatra, A., et al.</div>
+        <div class="pub-authors">Shankar, N. B., Afshan, A., Johnson, A., <strong>Mahapatra, A.</strong>, et al.</div>
         <span class="pub-status accepted">Published &middot; JASA Express Letters 2024</span>
       </div>
-    </div>
+    </a>
+
   </div>
 </section>
 
@@ -443,7 +445,6 @@
 <section id="beyond">
 
   <h2 class="section-title">Beyond the <em style="font-style:italic;color:var(--rose)">Researcher</em></h2>
-  <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1.4rem;">The things that make me &mdash; me. Edit the titles and descriptions below, and add your own photos.</p>
   <div class="beyond-grid">
     <div class="beyond-card">
       <div class="beyond-card-photo">
